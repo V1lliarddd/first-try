@@ -18,11 +18,14 @@ $isAuth = (bool) rand(0,1);
                     <h1>Блог обо всем</h1>
                 </div>
                 <div class="col-md-8 text-md-right text-end">
+                    <?php if($isAuth == 1):?>
                         <a class="btn btn-success" href="#" role="button">Добавить пост</a>
                         <a class="btn btn-warning" href="/auth" role="button">Мои посты</a>
                         <a class="btn btn-secondary" href="/auth" role="button">Выйти</a>
+                    <?php else: ?>
                         <a class="btn btn-primary" href="/auth" role="button">Регистрация</a>
                         <a class="btn btn-primary" href="/auth" role="button">Войти</a>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
